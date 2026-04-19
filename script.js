@@ -38,3 +38,14 @@ document.getElementById("openBtn").addEventListener("click", function () {
   }, 1500);
 
 });
+const container = document.querySelector(".particles");
+
+for (let i = 0; i < 30; i++) {
+  const dot = document.createElement("span");
+
+  dot.style.left = Math.random() * 100 + "%";
+  dot.style.animationDuration = (6 + Math.random() * 6) + "s";
+  dot.style.width = dot.style.height = (2 + Math.random() * 4) + "px";
+
+  container.appendChild(dot);
+}
