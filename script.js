@@ -10,6 +10,7 @@ gsap.to(".entry-inner h1", {
   y: -10,
   duration: 1.5
 });
+const main = document.getElementById("main");
 
 gsap.from("#openBtn", {
   opacity: 0,
@@ -27,7 +28,11 @@ btn.addEventListener("click", () => {
     duration: 1.5,
     ease: "power3.inOut"
   });
-
+gsap.to(main, {
+  opacity: 1,
+  duration: 1,
+  delay: 1.2
+});
   gsap.to(rightDoor, {
     x: "100%",
     duration: 1.5,

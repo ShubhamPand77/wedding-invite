@@ -72,7 +72,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-
+opacity: 0;   /* hidden initially */
   background:
     radial-gradient(circle at center, rgba(2,44,34,0.6), #000),
     url('https://www.transparenttextures.com/patterns/dark-matter.png');
