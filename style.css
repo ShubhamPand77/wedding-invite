@@ -18,6 +18,32 @@ body {
   align-items: center;
 
   z-index: 10;
+}/* Doors */
+.door {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to bottom, #021d1a, #000);
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 1px solid #d4af37;
+  background: transparent;
+  color: #d4af37;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Inner */

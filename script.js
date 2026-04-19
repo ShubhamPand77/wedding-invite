@@ -1,29 +1,44 @@
 const entry = document.getElementById("entry");
+const leftDoor = document.querySelector(".left");
+const rightDoor = document.querySelector(".right");
+const btn = document.getElementById("openBtn");
 const music = document.getElementById("bg-music");
 
-// TEXT ENTRY ANIMATION
+// Entry text animation
 gsap.to(".entry-inner h1", {
   opacity: 1,
   y: -10,
-  duration: 1.5,
-  ease: "power3.out"
+  duration: 1.5
 });
 
-gsap.to(".entry-inner p", {
-  opacity: 1,
-  y: 10,
-  duration: 1.5,
-  delay: 0.5,
-  ease: "power3.out"
+gsap.from("#openBtn", {
+  opacity: 0,
+  y: 20,
+  delay: 0.8,
+  duration: 1
 });
 
-// CLICK EVENT
-entry.addEventListener("click", () => {
+// Button click
+btn.addEventListener("click", () => {
 
+  // DOOR OPEN ANIMATION
+  gsap.to(leftDoor, {
+    x: "-100%",
+    duration: 1.5,
+    ease: "power3.inOut"
+  });
+
+  gsap.to(rightDoor, {
+    x: "100%",
+    duration: 1.5,
+    ease: "power3.inOut"
+  });
+
+  // Fade out entry
   gsap.to(entry, {
     opacity: 0,
-    duration: 1.2,
-    ease: "power3.inOut",
+    delay: 1,
+    duration: 1,
     onComplete: () => entry.style.display = "none"
   });
 
