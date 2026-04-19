@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+}
+
 /* ENTRY */
 .entry {
   position: fixed;
@@ -11,34 +17,28 @@
   position: absolute;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to bottom, #021d1a, #000);
+  background: #111;
   top: 0;
-  z-index: 1;  /* 👈 doors below text */
+  transition: 1s;
+  pointer-events: none; /* IMPORTANT */
 }
 
-.left {
-  left: 0;
-}
+.left { left: 0; }
+.right { right: 0; }
 
-.right {
-  right: 0;
-}
-
-/* TEXT ABOVE DOORS */
-.entry-inner {
+/* CONTENT */
+.content {
   position: relative;
-  z-index: 2;  /* 👈 MOST IMPORTANT */
+  z-index: 10;
+  color: gold;
   text-align: center;
-  color: #d4af37;
   top: 40%;
 }
 
 /* MAIN */
 .main {
-  opacity: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
+  display: none;
+  color: white;
+  text-align: center;
+  margin-top: 200px;
 }
