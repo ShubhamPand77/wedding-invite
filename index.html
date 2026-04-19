@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wedding Invite</title>
+<meta charset="UTF-8">
+<title>Wedding Invite</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- 🎵 Music -->
-  <audio id="bg-music" loop>
-    <source src="pawan-singh.mp3" type="audio/mpeg">
-  </audio>
+<!-- 🎵 Music -->
+<audio id="bg-music" loop>
+  <source src="pawan-singh.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- 🎬 Entry Screen -->
-  <div class="overlay" id="overlay">
-    <div class="overlay-content">
-      <h1>You're Invited</h1>
-      <p>Tap to Enter</p>
-    </div>
-  </div>
+<!-- ENTRY SCREEN -->
+<div class="entry" id="entry">
+  <h1>You're Invited</h1>
+  <p>Tap to Enter</p>
+</div>
 
-  <!-- 🌟 Main Content -->
-  <div class="content" id="content">
+<!-- MAIN CONTENT -->
+<div class="main" id="main">
+  <div class="card">
 
-    <h2 class="names">Anuj ❤️ Sonam</h2>
+    <h2>Anuj <span>&</span> Sonam</h2>
 
     <p class="line">Together with their families</p>
 
@@ -41,7 +44,9 @@
     <p class="venue">Nala Paar, Gorakhpur, Uttar Pradesh</p>
 
   </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
