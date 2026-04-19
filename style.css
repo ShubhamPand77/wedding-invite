@@ -32,4 +32,20 @@ section {
   opacity: 0;
   transform: translateY(50px);
   transition: 0.6s;
+}body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.5rem;
 }
