@@ -140,16 +140,19 @@ body {
 .hero {
   text-align: center;
   color: white;
+  .hero {
+  padding: 20px;
+}
 }
 
 .invite-text {
   letter-spacing: 3px;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
   color: #aaa;
 }
 
 .couple {
-  font-size: 3rem;
+  font-size: 3rem;clamp(2rem, 6vw, 3.5rem);
   color: #d4af37;
   margin: 20px 0;
   font-family: 'Playfair Display', serif;
@@ -192,6 +195,7 @@ body {
 .line, .date, .venue {
   color: #ccc;
   margin-top: 10px;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
 }
 @keyframes pulse {
   0% {
@@ -210,7 +214,10 @@ body {
 
 .gate-btn {
   animation: pulse 2.5s infinite;
+  width: clamp(100px, 25vw, 160px);
+  height: clamp(100px, 25vw, 160px);
 }
+
 .gate-btn::after {
   content: "";
   position: absolute;
@@ -331,5 +338,18 @@ body {
   100% {
     top: -10%;
     opacity: 0;
+  }
+}
+@media (max-width: 600px) {
+  .couple {
+    font-size: 2rem;
+  }
+
+  .gate-btn h2 {
+    font-size: 1.5rem;
+  }
+
+  .gate-btn p {
+    font-size: 0.6rem;
   }
 }
