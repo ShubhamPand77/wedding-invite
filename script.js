@@ -4,43 +4,40 @@ document.getElementById("openBtn").addEventListener("click", function () {
   const right = document.querySelector(".right");
   const entry = document.getElementById("entry");
   const main = document.getElementById("main");
+  const text = document.querySelector(".main h2");
+  const items = document.querySelectorAll(".text > *");
+setTimeout(() => {
+  entry.style.display = "none";
+  main.style.display = "flex";
 
-  // 🚪 Doors open
-  gsap.to(left, {
-    x: "-100%",
-    duration: 1.5,
-    ease: "power3.inOut"
+  main.style.opacity = "1";
+  main.style.transform = "scale(1)";
+
+  // 🔥 STAGGER ANIMATION
+  items.forEach((el, i) => {
+    setTimeout(() => {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }, i * 50); // delay gap
   });
 
-  gsap.to(right, {
-    x: "100%",
-    duration: 1.5,
-    ease: "power3.inOut"
-  });
+}, 1000);
+  // 🚪 Doors open (simple CSS — reliable)
+  left.style.transform = "translateX(-100%)";
+  right.style.transform = "translateX(100%)";
 
-  // ✨ Main reveal (zoom + fade)
-  gsap.to(main, {
-    opacity: 1,
-    scale: 1,
-    duration: 1.5,
-    delay: 1
-  });
+  // ✨ Main show
+  setTimeout(() => {
+    entry.style.display = "none";
+    main.style.display = "flex";
 
-  // 🎬 Text animation (stagger feel)
-  gsap.to(".main h2", {
-    opacity: 1,
-    y: 0,
-    duration: 1.2,
-    delay: 1.5,
-    ease: "power3.out"
-  });
+    // 🎬 animation AFTER visible
+    main.style.opacity = "1";
+    main.style.transform = "scale(1)";
 
-  // ❌ Hide entry
-  gsap.to(entry, {
-    opacity: 0,
-    delay: 1,
-    duration: 1,
-    onComplete: () => entry.style.display = "none"
-  });
+    const text = document.querySelector(".main h2");
+    text.style.opacity = "1";
+    text.style.transform = "translateY(0)";
+  }, 1000);
 
 });

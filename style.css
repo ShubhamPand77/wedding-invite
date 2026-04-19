@@ -37,11 +37,11 @@ body {
 
 /* MAIN */
 .main {
+  display: none;   /* IMPORTANT */
   opacity: 0;
   transform: scale(1.1);
   transition: 1s;
 
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -49,4 +49,35 @@ body {
 .main h2 {
   opacity: 0;
   transform: translateY(30px);
+  transition: 1s;
+}
+/* Names animation */
+.main h2 {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+/* subtle glow */
+.main h2 {
+  color: #d4af37;
+  text-shadow: 0 0 15px rgba(212,175,55,0.4);
+  font-size: 2.5rem;
+}
+.text > * {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* premium look */
+.name {
+  font-size: 2.8rem;
+  color: #d4af37;
+  text-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+
+.line, .date, .venue {
+  color: #ccc;
+  margin-top: 10px;
 }
