@@ -18,8 +18,24 @@ setTimeout(() => {
     setTimeout(() => {
       el.style.opacity = "1";
       el.style.transform = "translateY(0)";
-    }, i * 50); // delay gap
+    }, i * 1); // delay gap
   });
+  const music = document.getElementById("bg-music");
+
+// start music
+music.volume = 0;
+music.play();
+
+// smooth fade-in
+let vol = 0;
+const fade = setInterval(() => {
+  if (vol < 0.5) {
+    vol += 0.05;
+    music.volume = vol;
+  } else {
+    clearInterval(fade);
+  }
+}, 200);
 
 }, 1000);
   // 🚪 Doors open (simple CSS — reliable)
