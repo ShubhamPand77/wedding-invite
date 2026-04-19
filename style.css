@@ -10,23 +10,34 @@ body {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: radial-gradient(circle at center, #022c22, #000);
+
+  background: radial-gradient(circle at center, #021d1a 0%, #000 80%);
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  color: #d4af37;
+
   z-index: 10;
+}
+
+/* Inner */
+.entry-inner {
   text-align: center;
+  color: #d4af37;
 }
 
-.entry h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
+/* Title */
+.entry-inner h1 {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  opacity: 0;
 }
 
-.entry p {
-  opacity: 0.6;
+/* Subtext */
+.entry-inner p {
+  margin-top: 10px;
+  opacity: 0;
+  color: #aaa;
 }
 
 /* MAIN */
