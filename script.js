@@ -1,13 +1,46 @@
 document.getElementById("openBtn").addEventListener("click", function () {
 
-  console.log("CLICK WORKING");
+  const left = document.querySelector(".left");
+  const right = document.querySelector(".right");
+  const entry = document.getElementById("entry");
+  const main = document.getElementById("main");
 
-  document.querySelector(".left").style.transform = "translateX(-100%)";
-  document.querySelector(".right").style.transform = "translateX(100%)";
+  // 🚪 Doors open
+  gsap.to(left, {
+    x: "-100%",
+    duration: 1.5,
+    ease: "power3.inOut"
+  });
 
-  setTimeout(() => {
-    document.getElementById("entry").style.display = "none";
-    document.getElementById("main").style.display = "block";
-  }, 1000);
+  gsap.to(right, {
+    x: "100%",
+    duration: 1.5,
+    ease: "power3.inOut"
+  });
+
+  // ✨ Main reveal (zoom + fade)
+  gsap.to(main, {
+    opacity: 1,
+    scale: 1,
+    duration: 1.5,
+    delay: 1
+  });
+
+  // 🎬 Text animation (stagger feel)
+  gsap.to(".main h2", {
+    opacity: 1,
+    y: 0,
+    duration: 1.2,
+    delay: 1.5,
+    ease: "power3.out"
+  });
+
+  // ❌ Hide entry
+  gsap.to(entry, {
+    opacity: 0,
+    delay: 1,
+    duration: 1,
+    onComplete: () => entry.style.display = "none"
+  });
 
 });
