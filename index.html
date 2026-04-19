@@ -3,29 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Wedding Invite</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<audio id="bg-music" loop>
-  <source src="pawan-singh.mp3" type="audio/mpeg">
-</audio>
-  <section class="hero">
+
+  <!-- 🎵 Music -->
+  <audio id="bg-music" loop>
+    <source src="pawan-singh.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- 🔥 Tap Screen -->
+  <div class="overlay" id="overlay">
     <h1>You're Invited 💌</h1>
     <p>Tap to Open</p>
-  </section>
+  </div>
 
-  <section class="names">
-    <h2>anuj ❤️ sonam</h2>
-  </section>
+  <!-- 🎬 Main Content -->
+  <div class="content" id="content">
 
-  <section class="details">
-    <p>25 aug 2026</p>
-    <p>7:00 PM onwards</p>
-  </section>
+    <h2 class="names">Anuj ❤️ Sonam</h2>
 
-  <section class="venue">
-    <p> nala paar gorakhpur Uttar Pradesh</p>
-  </section>
+    <p class="date">25 August 2026</p>
+    <p class="time">7:00 PM onwards</p>
+
+    <p class="venue">Nala Paar, Gorakhpur, Uttar Pradesh</p>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -1,15 +1,14 @@
-const sections = document.querySelectorAll("section");
+const overlay = document.getElementById("overlay");
+const content = document.getElementById("content");
+const music = document.getElementById("bg-music");
 
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.style.opacity = 1;
-      sec.style.transform = "translateY(0)";
-    }
-  });
-});const music = document.getElementById("bg-music");
+overlay.addEventListener("click", () => {
+  overlay.style.opacity = "0";
+  setTimeout(() => {
+    overlay.style.display = "none";
+  }, 1000);
 
-document.body.addEventListener("click", () => {
+  content.style.opacity = "1";
+
   music.play();
 }, { once: true });
