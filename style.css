@@ -25,7 +25,7 @@ body {
 
   background: linear-gradient(to bottom, transparent, #d4af37, transparent);
   animation: lineGlow 3s infinite;
-  z-index: 3;
+  z-index: 3
   pointer-events: none;
 }
 
@@ -90,14 +90,12 @@ body {
   align-items: center;
   color: #d4af37;
   cursor: pointer;
+   overflow: hidden;
+  position: relative;
+  z-index:10;
   z-index: 9999;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(212,175,55,0.4);
-}
-.gate-btn {
-  overflow: hidden;
-  position: relative;
-  z-index: 9999;
 }
 
 .gate-btn::after {
