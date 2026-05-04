@@ -25,7 +25,7 @@ body {
 
   background: linear-gradient(to bottom, transparent, #d4af37, transparent);
   animation: lineGlow 3s infinite;
-  z-index: 3
+  z-index: 3; 
   pointer-events: none;
 }
 

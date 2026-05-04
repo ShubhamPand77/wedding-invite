@@ -1,17 +1,15 @@
-const openBtn = document.getElementById("openBtn");
-
 openBtn.addEventListener("click", () => {
+
   const left = document.querySelector(".left");
   const right = document.querySelector(".right");
   const entry = document.getElementById("entry");
   const main = document.getElementById("main");
   const music = document.getElementById("bg-music");
-  const btn = document.getElementById("openBtn");
-  const particleContainer = btn.querySelector(".particles");
-  
-  btn.addEventListener("click", () => {
 
-  for (let i = 0; i < 40; i++) {   // 🔥 increase count
+  const particleContainer = openBtn.querySelector(".particles");
+
+  // 💥 PARTICLE BURST
+  for (let i = 0; i < 40; i++) {
     const dot = document.createElement("span");
 
     dot.style.left = "50%";
@@ -28,12 +26,11 @@ openBtn.addEventListener("click", () => {
     setTimeout(() => dot.remove(), 1000);
   }
 
-});
-  // DOOR OPEN
+  // 🚪 DOOR OPEN
   left.style.transform = "translateX(-100%)";
   right.style.transform = "translateX(100%)";
 
-  // MUSIC
+  // 🎵 MUSIC
   music.volume = 0;
   music.play();
 
@@ -47,7 +44,7 @@ openBtn.addEventListener("click", () => {
     }
   }, 200);
 
-  // SHOW MAIN
+  // ✨ SHOW MAIN
   setTimeout(() => {
     entry.style.display = "none";
     main.style.display = "flex";
@@ -57,18 +54,4 @@ openBtn.addEventListener("click", () => {
     }, 100);
 
   }, 1500);
-});
-
-/* SCROLL ANIMATION */
-const sections = document.querySelectorAll(".section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-
-    if (top < window.innerHeight - 100) {
-      sec.style.opacity = "1";
-      sec.style.transform = "translateY(0)";
-    }
-  });
 });
