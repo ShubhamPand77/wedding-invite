@@ -97,6 +97,7 @@ body {
 .gate-btn {
   overflow: hidden;
   position: relative;
+  z-index: 9999;
 }
 
 .gate-btn::after {
