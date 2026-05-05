@@ -1,3 +1,5 @@
+const openBtn = document.getElementById("openBtn");
+
 openBtn.addEventListener("click", () => {
 
   const left = document.querySelector(".left");
@@ -8,10 +10,9 @@ openBtn.addEventListener("click", () => {
 
   const particleContainer = openBtn.querySelector(".particles");
 
-  // 💥 PARTICLE BURST
+  // 💥 particle burst
   for (let i = 0; i < 40; i++) {
     const dot = document.createElement("span");
-
     dot.style.left = "50%";
     dot.style.top = "50%";
 
@@ -22,36 +23,26 @@ openBtn.addEventListener("click", () => {
     dot.style.setProperty("--y", Math.sin(angle) * distance + "px");
 
     particleContainer.appendChild(dot);
-
     setTimeout(() => dot.remove(), 1000);
   }
 
-  // 🚪 DOOR OPEN
+  // 🚪 doors
   left.style.transform = "translateX(-100%)";
   right.style.transform = "translateX(100%)";
 
-  // 🎵 MUSIC
+  // 🎵 music
   music.volume = 0;
   music.play();
-
   let vol = 0;
   const fade = setInterval(() => {
-    if (vol < 0.5) {
-      vol += 0.05;
-      music.volume = vol;
-    } else {
-      clearInterval(fade);
-    }
+    if (vol < 0.5) { vol += 0.05; music.volume = vol; }
+    else { clearInterval(fade); }
   }, 200);
 
-  // ✨ SHOW MAIN
+  // ✨ show main
   setTimeout(() => {
     entry.style.display = "none";
     main.style.display = "flex";
-
-    setTimeout(() => {
-      main.style.opacity = "1";
-    }, 100);
-
+    setTimeout(() => { main.style.opacity = "1"; }, 100);
   }, 1500);
 });
